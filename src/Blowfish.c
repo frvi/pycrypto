@@ -174,8 +174,8 @@ static void Blowfish_init(Blowfish_state *self, const unsigned char *key, int ke
     if (keylen < 1) {
         PyErr_SetString(PyExc_ValueError, "Key cannot be empty");
         return;
-    } else if (keylen > 56) {
-        PyErr_SetString(PyExc_ValueError, "Maximum key size is 448 bits");
+    } else if (keylen > 72) {
+        PyErr_SetString(PyExc_ValueError, "Maximum key size is 576 bits");
         return;
     }
 
